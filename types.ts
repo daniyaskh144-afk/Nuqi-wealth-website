@@ -7,6 +7,7 @@ export interface ServiceItem {
   listType?: 'disc' | 'decimal';
   icon: LucideIcon;
   linkText: string;
+  link?: string;
   extraInfo?: string[];
   themeColor: string;
 }

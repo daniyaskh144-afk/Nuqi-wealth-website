@@ -8,6 +8,7 @@ const services: ServiceItem[] = [
     description: "An innovative digital platform designed to bridge the gap between ethical investments and cutting-edge technology. This platform empowers clients in the UAE and India to not only create sustainable wealth but also to make a positive impact on society and the environment.",
     icon: Coins,
     linkText: "Know More >>",
+    link: "/digital-wealth",
     themeColor: "#FFCC80" // Pastel Orange
   },
   {
@@ -21,6 +22,7 @@ const services: ServiceItem[] = [
     ],
     icon: Landmark,
     linkText: "Know More >>",
+    link: "/invest-banking",
     themeColor: "#A5D6A7" // Pastel Green
   },
   {
@@ -35,6 +37,7 @@ const services: ServiceItem[] = [
     ],
     icon: Sliders,
     linkText: "Know More >>",
+    link: "/prive-wealth",
     themeColor: "#81D4FA" // Pastel Blue
   },
   {
@@ -47,6 +50,7 @@ const services: ServiceItem[] = [
     ],
     icon: Bookmark,
     linkText: "Know More >>",
+    link: "/fund-advisory",
     themeColor: "#FFE082" // Pastel Gold
   }
 ];
@@ -131,7 +135,7 @@ const Services: React.FC = () => {
                 {/* Footer Link */}
                 <div className="mt-6 pt-4">
                   <a 
-                    href="#" 
+                    href={service.link || '#'} 
                     className="inline-flex items-center text-sm font-bold tracking-wide transition-all group/link"
                     style={{ color: service.themeColor }}
                   >
