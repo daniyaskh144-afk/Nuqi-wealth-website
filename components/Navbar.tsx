@@ -3,7 +3,7 @@ import { Menu, X, Instagram, Linkedin, ArrowRight } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { label: 'About us', href: '#about' },
   { label: 'Why us', href: '#why-nuqi' },
   { label: 'Solutions', href: '#solutions' },
@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className=" cursor-pointer">
+        <a className=" cursor-pointer" href="/">
          <img src="../logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
-          </div>
+          </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">

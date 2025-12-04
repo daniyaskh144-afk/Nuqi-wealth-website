@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const heroImages = [
   // Current: Suit/Cufflinks (Wealth & Lifestyle)
@@ -79,13 +80,14 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-wrap gap-6 my-6 items-center">
             {/* Primary Button */}
-            <button className="group relative px-6 py-5 border-solid border-[#000000] border-[1px] bg-[#0dd3ff] text-black overflow-hidden rounded-xl transition-all duration-300 hover:shadow-[0_0_12px_rgb(13, 211, 255,0.5)] hover:scale-105 active:scale-95">
+            
+            <a href="#solutions" className="group relative px-6 py-5 border-solid border-[#000000] border-[1px] bg-[#0dd3ff] text-black overflow-hidden rounded-xl transition-all duration-300 hover:shadow-[0_0_12px_rgb(13, 211, 255,0.5)] hover:scale-105 active:scale-95">
               <div className="absolute inset-0 w-full h-full bg-nuqi-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left ease-out"></div>
               <span className="relative z-10 font-bold tracking-widest text-xs uppercase flex items-center gap-2 group-hover:text-black transition-colors">
                 Explore Solutions
                 <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform duration-300" />
               </span>
-            </button>
+            </a>
 
             {/* Secondary Button */}
              <button className="group relative px-5 py-4 border-solid border-[#0dd3ff] border-[1px] text-white overflow-hidden rounded-xl transition-all duration-300 hover:shadow-[0_0_12px_rgb(13, 211, 255,0.5)] hover:scale-105 active:scale-95">
