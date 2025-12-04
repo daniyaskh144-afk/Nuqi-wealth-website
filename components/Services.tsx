@@ -1,6 +1,7 @@
 import React from 'react';
 import { Coins, Landmark, Sliders, Bookmark, ArrowRight } from 'lucide-react';
 import { ServiceItem } from '../types';
+import { Link } from 'react-router-dom';
 
 const services: ServiceItem[] = [
   {
@@ -134,8 +135,8 @@ const Services: React.FC = () => {
 
                 {/* Footer Link */}
                 <div className="mt-6 pt-4">
-                  <a 
-                    href={service.link || '#'} 
+                  <Link 
+                    to={service.link || '#'} 
                     className="inline-flex items-center text-sm font-bold tracking-wide transition-all group/link"
                     style={{ color: service.themeColor }}
                   >
@@ -144,7 +145,7 @@ const Services: React.FC = () => {
                         <span className="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all duration-300 group-hover/link:w-full"></span>
                     </span>
                     <ArrowRight size={14} className="ml-2 transform group-hover/link:translate-x-2 transition-transform duration-300" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
