@@ -8,9 +8,9 @@ const heroImages = [
   // Skyscrapers (Growth & Structure)
   "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
   // Handshake/Meeting (Partnership & Trust)
-  "https://i.pinimg.com/736x/7f/47/2e/7f472ef9666a089e9a7fde1986a78c61.jpg",
+  "../pen.png",
   // Abstract Architecture (Innovation)
-  "https://i.pinimg.com/736x/ee/6f/f7/ee6ff7fbfc7f7ec9487de835f779b76e.jpg"
+  "../stone.png"
 ];
 
 const Hero: React.FC = () => {
