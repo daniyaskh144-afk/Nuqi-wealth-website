@@ -58,12 +58,8 @@ const services: ServiceItem[] = [
 
 const Services: React.FC = () => {
   return (
-    <section id="solutions" className="py-24 bg-[#0B0A0A] relative overflow-hidden flex flex-col items-center justify-center">
-       {/* Background gradient hint */}
-       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-[#080808] to-black opacity-80 pointer-events-none"></div>
-
-       {/* Section Header */}
-       <div className="max-w-7xl mx-auto px-6 mb-20 text-center relative z-10 animate-fade-in-up">
+    <div>
+     <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10 animate-fade-in-up">
           <span className="text-nuqi-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
             Comprehensive Solutions
           </span>
@@ -71,8 +67,17 @@ const Services: React.FC = () => {
             Our Expertise
           </h2>
        </div>
+    <section id="solutions" className="py-12 relative overflow-hidden flex flex-col items-center justify-center"
+    style={{ backgroundImage: "url('../image.png')" , backgroundSize: 'cover', backgroundPosition: 'center' }}>
+       {/* Background gradient hint */}
+       {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-[#080808] to-black opacity-80 pointer-events-none"></div> */}
 
-       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10">
+       {/* Section Header */}
+      
+
+       <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10 "
+        
+        >
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div 
@@ -109,7 +114,7 @@ const Services: React.FC = () => {
 
                   {/* Content - Lists */}
                   {service.details && (
-                    <ul className={`text-sm text-[#CCCCCC] font-light leading-relaxed space-y-2 mb-6 ${service.listType === 'decimal' ? 'list-decimal pl-4' : 'list-none'} group-hover:text-white transition-colors duration-300`}>
+                    <ul className={`text-sm text-[#CCCCCC] font-light leading-relaxed space-y-2 mb-3 ${service.listType === 'decimal' ? 'list-decimal pl-4' : 'list-none'} group-hover:text-white transition-colors duration-300`}>
                       {service.details.map((detail, idx) => (
                         <li key={idx} className={service.listType === 'disc' ? 'flex items-start gap-2' : ''}>
                            {service.listType === 'disc' && (
@@ -134,7 +139,7 @@ const Services: React.FC = () => {
                 </div>
 
                 {/* Footer Link */}
-                <div className="mt-6 pt-4">
+                <div className="">
                   <Link 
                     to={service.link || '#'} 
                     className="inline-flex items-center text-sm font-bold tracking-wide transition-all group/link"
@@ -159,6 +164,7 @@ const Services: React.FC = () => {
          }
        `}</style>
     </section>
+    </div>
   );
 };
 
