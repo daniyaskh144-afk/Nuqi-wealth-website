@@ -40,7 +40,7 @@ export default function InvestmentBanking() {
           <h2 className="text-4xl md:text-5xl font-semibold leading-snug">
             Trusted Advisory for
             <br />
-            <span className="text-nuqi-goldLight">Capital, Debt & Strategy</span>
+            <span className="block mt-2 text-nuqi-goldLight">Capital, Debt & Strategy</span>
           </h2>
 
           <div className="flex gap-6">

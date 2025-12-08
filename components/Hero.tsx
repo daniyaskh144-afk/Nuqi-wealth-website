@@ -69,9 +69,9 @@ const Hero: React.FC = () => {
             <span className="text-nuqi-gold uppercase tracking-[0.3em] text-xs font-bold">The Gold Collar Life</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white mb-8 leading-[0.95] tracking-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-8 leading-[0.95] tracking-tight">
             Empowering <br />
-            Wealth with <span className="italic font-normal bg-gradient-to-r from-nuqi-gold to-nuqi-goldDark bg-clip-text text-transparent">Integrity</span>
+            Wealth with <br></br><span className="italic font-normal bg-gradient-to-r from-nuqi-gold to-nuqi-goldDark bg-clip-text text-transparent">Integrity</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-xl border-l border-white/10 pl-8 backdrop-blur-sm">

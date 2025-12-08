@@ -26,7 +26,7 @@ const About: React.FC = () => {
         <div className="md:col-span-8">
             <div className="prose prose-invert max-w-none">
                  <h3 className="text-3xl md:text-5xl font-light text-white leading-[1.15] mb-10">
-                  A Global Financial Ecosystem <span className="text-nuqi-gold inline-block">Built for Tomorrow</span>
+                  A Global Financial Ecosystem <span className="block mt-2 text-nuqi-gold inline-block">Built for Tomorrow</span>
                 </h3>
                 
                 <div className="space-y-8 text-gray-400 text-lg md:text-xl font-light leading-relaxed">

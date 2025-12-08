@@ -42,7 +42,7 @@ export default function PriveWealth() {
           <h2 className="text-4xl md:text-5xl font-semibold leading-snug">
             Modern Private Banking,
             <br />
-            <span className="text-nuqi-goldLight">Rebuilt for Transparency</span>
+            <span className="block mt-2 text-nuqi-goldLight">Rebuilt for Transparency</span>
           </h2>
 
           <div className="flex gap-6">
