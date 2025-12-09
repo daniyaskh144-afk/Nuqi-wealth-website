@@ -6,7 +6,7 @@ const heroImages = [
   // Current: Suit/Cufflinks (Wealth & Lifestyle)
   "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
   // Skyscrapers (Growth & Structure)
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
+  "../Golden Towers.jpg",
   // Handshake/Meeting (Partnership & Trust)
   "../pen.png",
   // Abstract Architecture (Innovation)
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             }}
           >
              {/* Dark overlay for text readability */}
-             <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+             {/* <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div> */}
           </div>
         ))}
       </div>

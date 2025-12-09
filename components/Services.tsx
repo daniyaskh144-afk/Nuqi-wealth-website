@@ -10,31 +10,22 @@ const services: ServiceItem[] = [
     icon: Coins,
     linkText: "Know More >>",
     link: "/digital-wealth",
-    themeColor: "#FFCC80" // Pastel Orange
+    themeColor: "#0AD1C8" // Pastel Orange
   },
   {
     title: "NUQI Investment Banking",
-    listType: 'disc',
     details: [
-        "Expertise:",
-        "Debt Advisory – Structured corporate debt, Sukuk issuances, private credit solutions",
-        "Equity Advisory – PE fundraising, strategic stake placements",
-        "Capital Raise – Multi-stage growth capital raising for corporates & startups"
+  "We provide end-to-end capital advisory services, including structured corporate debt and Sukuk solutions, private credit, equity advisory for PE fundraising and strategic stake placements, as well as multi-stage growth capital raising for corporates and startups."
     ],
     icon: Landmark,
     linkText: "Know More >>",
     link: "/invest-banking",
-    themeColor: "#A5D6A7" // Pastel Green
+    themeColor: "#45DFB1" // Pastel Green
   },
   {
     title: "NUQI Privé – Wealth Management",
-    listType: 'decimal',
     details: [
-        "Managing Assets (portfolio & discretionary mandates)",
-        "Advising on Financial Products",
-        "Arranging Credit & Advising on Credit",
-        "Arranging Deals in Investments",
-        "Providing Custody (via global custodian tie-ups)"
+        "We manage investment portfolios and discretionary mandates, advise on a range of financial products, arrange and structure credit solutions, facilitate investment deals, and provide custody services through global custodian partnerships."
     ],
     icon: Sliders,
     linkText: "Know More >>",
@@ -52,7 +43,7 @@ const services: ServiceItem[] = [
     icon: Bookmark,
     linkText: "Know More >>",
     link: "/fund-advisory",
-    themeColor: "#FFE082" // Pastel Gold
+    themeColor: "#80ED99" // Pastel Gold
   }
 ];
 

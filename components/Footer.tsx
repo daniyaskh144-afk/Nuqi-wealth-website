@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
+        <div className="flex justify-between mb-12">
           
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-8">
@@ -41,9 +41,19 @@ const Footer: React.FC = () => {
 
           {/* Links 2 */}
           <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">Links</h4>
+            <ul className="space-y-4 text-gray-500 text-sm font-medium">
+              {['About','News', 'Contact Us'].map((link) => (
+                <li key={link}><a href="#" className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block">{link}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Links 2 */}
+          <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">Products</h4>
             <ul className="space-y-4 text-gray-500 text-sm font-medium">
-              {['Ethosphere', 'Iris'].map((link) => (
+              {['Prive','Ethosphere'].map((link) => (
                 <li key={link}><a href="#" className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block">{link}</a></li>
               ))}
             </ul>
