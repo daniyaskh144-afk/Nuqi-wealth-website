@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-8">
             <div className="flex items-center gap-3 group">
-              <img src="../logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
+              <img src="../Images/logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
                 </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs font-light">
               Empowering wealth with integrity. Join us in shaping the future of ethical finance.
