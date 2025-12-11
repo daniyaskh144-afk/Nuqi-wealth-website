@@ -76,14 +76,14 @@ const Services: React.FC = () => {
         }}
       >
         {/* Overlay to ensure readable text */}
-        <div
+        {/* <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
               "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.75) 100%)",
           }}
-        />
+        /> */}
 
         {/* Content container - z-10 so it's above overlay */}
         <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10">
