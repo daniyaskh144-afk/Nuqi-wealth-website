@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a className=" cursor-pointer" href="/">
-         <img src="../Images/logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
+         <img src="/logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
           </a>
 
         {/* Desktop Nav */}

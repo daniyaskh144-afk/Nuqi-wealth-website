@@ -6,11 +6,11 @@ const heroImages = [
   // Current: Suit/Cufflinks (Wealth & Lifestyle)
   "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
   // Skyscrapers (Growth & Structure)
-  "../images/Golden Towers.jpg",
+  "/Golden Towers.jpg",
   // Handshake/Meeting (Partnership & Trust)
-  "../images/pen.png",
+  "/pen.png",
   // Abstract Architecture (Innovation)
-  "../images/stone.png"
+  "/stone.png"
 ];
 
 const Hero: React.FC = () => {
