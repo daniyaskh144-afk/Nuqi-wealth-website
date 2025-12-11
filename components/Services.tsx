@@ -69,7 +69,7 @@ const Services: React.FC = () => {
         aria-label="Services"
         className="py-12 relative overflow-hidden flex flex-col items-center justify-center"
         style={{
-          backgroundImage: "url('../images/bg.png')",
+          backgroundImage: "url('/bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
