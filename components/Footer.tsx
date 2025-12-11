@@ -11,12 +11,12 @@ const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex justify-between mb-12">
-          
+
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-8">
             <div className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />   
-                </div>
+              <img src="/logo.png" alt="Wealth Thumbnail" className="h-10 w-auto" />
+            </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs font-light">
               Empowering wealth with integrity. Join us in shaping the future of ethical finance.
             </p>
@@ -41,19 +41,37 @@ const Footer: React.FC = () => {
 
           {/* Links 2 */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">Links</h4>
+            <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">
+              Links
+            </h4>
             <ul className="space-y-4 text-gray-500 text-sm font-medium">
-              {['About','News', 'Contact Us'].map((link) => (
-                <li key={link}><a href="#" className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block">{link}</a></li>
-              ))}
+              <li>
+                <a
+                  href="https://in.nuqiwealth.com/About"
+                  className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://in.nuqiwealth.com/press"
+                  className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block"
+                >
+                  News
+                </a>
+              </li>
+              
             </ul>
           </div>
+
+
 
           {/* Links 2 */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">Products</h4>
             <ul className="space-y-4 text-gray-500 text-sm font-medium">
-              {['Prive','Ethosphere'].map((link) => (
+              {['Prive', 'Ethosphere'].map((link) => (
                 <li key={link}><a href="#" className="hover:text-nuqi-gold hover:translate-x-1 transition-all duration-300 block">{link}</a></li>
               ))}
             </ul>
@@ -61,18 +79,35 @@ const Footer: React.FC = () => {
 
           {/* Contact / CTA */}
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">Get Started</h4>
-             <div className="p-8 bg-[#0A0A0A] border border-white/10 hover:border-nuqi-gold/50 transition-colors duration-500 group relative overflow-hidden rounded-sm hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-nuqi-gold/5 rounded-full blur-2xl group-hover:bg-nuqi-gold/20 transition-colors duration-500"></div>
-                <p className="text-gray-400 text-sm mb-6 font-light leading-relaxed group-hover:text-gray-300">Ready to start your ethical wealth journey today?</p>
+            <h4 className="text-white font-bold mb-8 tracking-[0.2em] text-xs uppercase text-glow">
+              Get Started
+            </h4>
+
+            <div className="p-8 bg-[#0A0A0A] border border-white/10 hover:border-nuqi-gold/50 transition-colors duration-500 group relative overflow-hidden rounded-sm hover:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-nuqi-gold/5 rounded-full blur-2xl group-hover:bg-nuqi-gold/20 transition-colors duration-500"></div>
+
+              <p className="text-gray-400 text-sm mb-6 font-light leading-relaxed group-hover:text-gray-300">
+                Ready to start your ethical wealth journey today?
+              </p>
+
+              <a
+                href="https://in.nuqiwealth.com/ContactsPage"
+                className="w-full block"
+              >
                 <button className="w-full py-4 bg-white text-black text-xs font-bold uppercase tracking-widest relative overflow-hidden rounded-sm group/btn hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">
-                     <div className="absolute inset-0 w-full h-full bg-nuqi-gold transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out origin-left"></div>
-                    <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black transition-colors">
-                        Contact Us <ArrowUpRight size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                    </span>
+                  <div className="absolute inset-0 w-full h-full bg-nuqi-gold transform -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-300 ease-out origin-left"></div>
+                  <span className="relative z-10 flex items-center justify-center gap-2 group-hover/btn:text-black transition-colors">
+                    Contact Us
+                    <ArrowUpRight
+                      size={14}
+                      className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"
+                    />
+                  </span>
                 </button>
-             </div>
+              </a>
+            </div>
           </div>
+
 
         </div>
 

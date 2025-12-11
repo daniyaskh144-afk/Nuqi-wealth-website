@@ -6,9 +6,9 @@ const heroImages = [
   // Current: Suit/Cufflinks (Wealth & Lifestyle)
   "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2671&auto=format&fit=crop",
   // Skyscrapers (Growth & Structure)
-  "/Golden Towers.jpg",
+  "/Golden Towers.png",
   // Handshake/Meeting (Partnership & Trust)
-  "/pen.png",
+  "/Pen.png",
   // Abstract Architecture (Innovation)
   "/stone.png"
 ];
