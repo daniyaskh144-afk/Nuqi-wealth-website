@@ -10,6 +10,7 @@ export interface ServiceItem {
   link?: string;
   extraInfo?: string[];
   themeColor: string;
+  bgimage?: string;
 }
 
 export interface FeatureItem {

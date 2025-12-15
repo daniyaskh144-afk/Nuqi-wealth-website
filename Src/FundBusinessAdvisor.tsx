@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import {
     Landmark,
     Layers,
@@ -201,6 +202,7 @@ function PageGridSection({ label, title, items }) {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

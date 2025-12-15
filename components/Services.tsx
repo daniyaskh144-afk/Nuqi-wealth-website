@@ -1,43 +1,48 @@
 import React from "react";
 import { Coins, Landmark, Sliders, Bookmark, ArrowRight } from "lucide-react";
-import { ServiceItem } from "../types";
 import { Link } from "react-router-dom";
 
-/* -- data -- (kept inline so file is self-contained) */
-const services: ServiceItem[] = [
+/* ------------------------------------------------------------------ */
+/* DATA                                                               */
+/* ------------------------------------------------------------------ */
+
+const services = [
   {
     title: "NUQI Digital Wealth",
     description:
-      "An innovative digital platform designed to bridge the gap between ethical investments and cutting-edge technology. This platform empowers clients in the UAE and India to not only create sustainable wealth but also to make a positive impact on society and the environment.",
+      "An innovative digital platform designed to bridge the gap between ethical investments and cutting-edge technology. This platform empowers clients in the UAE and India to build sustainable wealth with impact.",
     icon: Coins,
     linkText: "Know More >>",
     link: "/digital-wealth",
-    themeColor: "#0AD1C8",
+    themeColor: "orange",
+    bgimage: "/digital wealth",
   },
   {
     title: "NUQI Investment Banking",
     details: [
-      "We provide end-to-end capital advisory services, including structured corporate debt and Sukuk solutions, private credit, equity advisory for PE fundraising and strategic stake placements, as well as multi-stage growth capital raising for corporates and startups.",
+      "End-to-end capital advisory including structured corporate debt, Sukuk solutions, private credit, and equity advisory for PE fundraising and strategic stake placements.",
     ],
     icon: Landmark,
     linkText: "Know More >>",
     link: "/invest-banking",
     themeColor: "#45DFB1",
+    bgimage: "/investment banking.png",
   },
   {
     title: "NUQI Privé – Wealth Management",
     details: [
-      "We manage investment portfolios and discretionary mandates, advise on a range of financial products, arrange and structure credit solutions, facilitate investment deals, and provide custody services through global custodian partnerships.",
+      "Discretionary portfolio management, advisory on financial products, structured credit solutions, custody services, and global investment facilitation.",
     ],
     icon: Sliders,
     linkText: "Know More >>",
     link: "/prive-wealth",
-    themeColor: "#81D4FA",
+    themeColor: "violet",
+    bgimage: "/nuqi prive.png",
   },
   {
     title: "Fund Business Advisory",
     description:
-      "VCC Fund Advisory (Mauritius):\nNUQI structures and advises funds under the VCC regime, enabling cross-border investments.",
+      "VCC Fund Advisory (Mauritius):\nNUQI structures and advises funds under the VCC regime, enabling efficient cross-border investments.",
     extraInfo: [
       "Current Initiatives:",
       "NUQI Pure Impact India Equity Fund",
@@ -46,15 +51,20 @@ const services: ServiceItem[] = [
     icon: Bookmark,
     linkText: "Know More >>",
     link: "/fund-advisory",
-    themeColor: "#80ED99",
+    themeColor: "#0dd3ff",
+    bgimage: "/advisory.png",
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* COMPONENT                                                          */
+/* ------------------------------------------------------------------ */
 
 const Services: React.FC = () => {
   return (
     <div>
-      {/* Section intro */}
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-20">
+      {/* Section Intro */}
+      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <span className="text-nuqi-gold text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
           Comprehensive Solutions
         </span>
@@ -63,118 +73,104 @@ const Services: React.FC = () => {
         </h2>
       </div>
 
-      {/* Services section with background image */}
-      <section
-        id="solutions"
-        aria-label="Services"
-        className="py-12 relative overflow-hidden flex flex-col items-center justify-center"
-        style={{
-          backgroundImage: "url('/bg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {/* Overlay to ensure readable text */}
-        {/* <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.75) 100%)",
-          }}
-        /> */}
-
-        {/* Content container - z-10 so it's above overlay */}
-        <div className="max-w-[1400px] mx-auto px-6 w-full relative z-10">
+      {/* Services Grid */}
+      <section className="py-12">
+        <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <article
                 key={index}
-                className="group flex flex-col justify-between bg-[#0B0A0A] border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] card-hover-glow cursor-default"
-                style={{
-                  ['--card-theme' as any]: service.themeColor,
-                }}
+                className="group relative flex flex-col justify-between rounded-2xl border border-white/10 p-8 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02]"
+                style={{ ["--card-theme" as any]: service.themeColor }}
               >
-                <div>
-                  {/* Icon */}
-                  <div
-                    className="mb-6 transition-transform duration-500 group-hover:scale-110 origin-left"
-                    style={{ color: service.themeColor }}
-                  >
-                    <service.icon size={42} strokeWidth={1.5} />
+                {/* Hover Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ backgroundImage: `url(${service.bgimage})` }}
+                />
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Card Content */}
+                <div className="relative z-10 flex flex-col justify-between h-full">
+                  <div>
+                    {/* Icon */}
+                    <div
+                      className="mb-6 transition-transform duration-500 group-hover:scale-110 origin-left"
+                      style={{ color: service.themeColor }}
+                    >
+                      <service.icon size={42} strokeWidth={1.5} />
+                    </div>
+
+                    {/* Title */}
+                    <h3
+                      className="text-xl font-normal mb-6 leading-tight"
+                      style={{ color: service.themeColor }}
+                    >
+                      {service.title}
+                    </h3>
+
+                    {/* Description */}
+                    {service.description && (
+                      <p className="text-sm text-[#CCCCCC] font-light leading-relaxed mb-6 whitespace-pre-line group-hover:text-white transition-colors duration-300">
+                        {service.description}
+                      </p>
+                    )}
+
+                    {/* Details */}
+                    {service.details && (
+                      <ul className="text-sm text-[#CCCCCC] font-light leading-relaxed space-y-2 mb-3 group-hover:text-white transition-colors duration-300">
+                        {service.details.map((detail, idx) => (
+                          <li key={idx}>{detail}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {/* Extra Info */}
+                    {service.extraInfo && (
+                      <div className="text-sm text-[#CCCCCC] font-light leading-relaxed space-y-1">
+                        {service.extraInfo.map((line, idx) => (
+                          <p
+                            key={idx}
+                            className={idx === 0 ? "font-medium text-white mt-4" : ""}
+                          >
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
-                  {/* Title */}
-                  <h3
-                    className="text-xl font-normal mb-6 leading-tight"
-                    style={{ color: service.themeColor }}
-                  >
-                    {service.title}
-                  </h3>
-
-                  {/* Paragraph description */}
-                  {service.description && (
-                    <div className="text-sm text-[#CCCCCC] font-light leading-relaxed mb-6 whitespace-pre-line group-hover:text-white transition-colors duration-300">
-                      {service.description}
-                    </div>
-                  )}
-
-                  {/* Details list */}
-                  {service.details && (
-                    <ul
-                      className={`text-sm text-[#CCCCCC] font-light leading-relaxed space-y-2 mb-3 ${service.listType === 'decimal' ? 'list-decimal pl-4' : 'list-none'} group-hover:text-white transition-colors duration-300`}
-                    >
-                      {service.details.map((detail, idx) => (
-                        <li key={idx} className={service.listType === 'disc' ? 'flex items-start gap-2' : ''}>
-                          {service.listType === 'disc' && (
-                            <span className="mt-1.5 w-1 h-1 rounded-full flex-shrink-0 bg-white" />
-                          )}
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {/* Extra info */}
-                  {service.extraInfo && (
-                    <div className="text-sm text-[#CCCCCC] font-light leading-relaxed space-y-1">
-                      {service.extraInfo.map((line, idx) => (
-                        <p key={idx} className={idx === 0 ? "font-medium text-white mt-4" : ""}>
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Footer Link */}
-                <div>
+                  {/* Footer Link */}
                   <Link
-                    to={service.link || "#"}
-                    className="inline-flex items-center text-sm font-bold tracking-wide transition-all group/link"
+                    to={service.link}
+                    className="inline-flex items-center text-sm font-bold tracking-wide mt-6 transition-all group/link"
                     style={{ color: service.themeColor }}
                   >
                     <span className="relative">
                       {service.linkText.replace(">>", "")}
                       <span className="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all duration-300 group-hover/link:w-full" />
                     </span>
-                    <ArrowRight size={14} className="ml-2 transform group-hover/link:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight
+                      size={14}
+                      className="ml-2 transform group-hover/link:translate-x-2 transition-transform duration-300"
+                    />
                   </Link>
                 </div>
               </article>
             ))}
           </div>
         </div>
-
-        {/* card hover glow style (kept inline for convenience) */}
-        <style>{`
-          .card-hover-glow:hover {
-            border-color: var(--card-theme);
-            box-shadow: 0 10px 25px -12px var(--card-theme);
-          }
-        `}</style>
       </section>
+
+      {/* Hover Glow */}
+      <style>{`
+        article:hover {
+          border-color: var(--card-theme);
+          box-shadow: 0 10px 30px -12px var(--card-theme);
+        }
+      `}</style>
     </div>
   );
 };

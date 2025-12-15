@@ -7,7 +7,6 @@ const navItems: NavItem[] = [
   { label: 'About us', href: '#about' },
   { label: 'Why us', href: '#why-nuqi' },
   { label: 'Solutions', href: '#solutions' },
-  { label: 'Socials', href: '#footer' },
 ];
 
 const Navbar: React.FC = () => {
@@ -51,7 +50,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* CTA & Socials */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-4 pr-6 border-r border-white/10">
             {[Instagram, Linkedin].map((Icon, i) => (
                <a key={i} href="#" className="text-gray-400 hover:text-nuqi-gold transition-all duration-300 hover:scale-125 hover:drop-shadow-[0_0_8px_rgba(13,211,255,0.5)]">
@@ -60,7 +59,7 @@ const Navbar: React.FC = () => {
             ))}
           </div>
           
-        </div>
+        </div> */}
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-white p-2 hover:text-nuqi-gold transition-colors transform active:scale-95"

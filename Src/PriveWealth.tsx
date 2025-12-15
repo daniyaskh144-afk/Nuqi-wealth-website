@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import {
   ShieldCheck,
   FolderHeart,
@@ -190,6 +191,7 @@ function FeatureBlock({ id, title, icon, points }) {
       </ul>
 
       <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-nuqi-goldLight/60 transition-all duration-500 group-hover:w-full"></div>
+    <Footer />
     </div>
   );
 }

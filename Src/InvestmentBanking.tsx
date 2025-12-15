@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import {
   Landmark,
   ArrowRightCircle,
@@ -175,6 +176,7 @@ export default function InvestmentBanking() {
           with confidence, integrity and long-term alignment.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }

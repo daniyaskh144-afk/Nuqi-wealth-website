@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import {
   ShieldCheck,
   LineChart,
@@ -123,6 +124,7 @@ export default function DigitalWealthAdvantages() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
