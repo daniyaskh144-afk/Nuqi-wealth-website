@@ -59,7 +59,6 @@ const Hero: React.FC = () => {
       
       {/* Cinematic Overlays */}
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
